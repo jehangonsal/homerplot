@@ -16,7 +16,7 @@ datasets::USPersonalExpenditure %>% as.data.frame() %>% cbind(Area) %>% gather(k
   mutate(Spend = Spend*1000000000) %>%
   ggplot(aes(x = Year, y = Spend, group = Area)) + geom_line(aes(color = Area), size = .8, alpha = .8) + theme_bw() +
   labs(title = "Spending is up this year!", subtitle = "Good news for the economy!", 
-       caption = "Unfortunately, they're buying cigarettes") + 
+       caption = "Hopefully it's not all cigarettes") + 
   scale_y_continuous(labels = scales::dollar)
 dev.off()
 
